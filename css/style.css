@@ -10,6 +10,9 @@
 }
 
 
+html, body {
+  max-width: 100vw; 
+}
 
 html { height: 100%; }
 body {
@@ -22,10 +25,14 @@ body {
   color: var(--noir);
   scroll-behavior: smooth;
 }
-main { flex: 1; }
-footer { margin-top: auto; }
 
-/* === 2. Top‑bar & logo ==================================== */
+main {
+   flex: 1;
+}
+footer { 
+  margin-top: auto; }
+
+
 .top-bar {
   background: linear-gradient(135deg, var(--Rouge), var(--Rouge-fonce));
   color: var(--blanc);
@@ -74,18 +81,18 @@ footer { margin-top: auto; }
   height: 80px;
 }
 
-/* === 3. Navigation ======================================== */
+
 .navbar {
   background: #222 !important;
   font-size: 1.05rem;
   padding: .6rem 0;
   transition: background .3s;
 }
-/* === Style des liens de la navbar === */
+
 .navbar .nav-link {
-  color: var(--blanc) !important;  /* Couleur du texte en blanc */
-  margin: 0 12px;                 /* Marge horizontale entre les liens */
-  position: relative;             /* Position relative pour le pseudo-élément */
+  color: var(--blanc) ;  
+  margin: 0 12px;                
+  position: relative;             
 }
 
 
@@ -101,13 +108,13 @@ footer { margin-top: auto; }
   transition: width .3s;          
 }
 
-/* === États hover et active === */
+
 .navbar .nav-link:hover::after,
 .navbar .nav-link.active::after {
   width: 100%;                    
 }
 
-/* === Couleur du lien actif === */
+
 .navbar .nav-link.active {
   color: var(--moutarde-clair) !important;  
 }
@@ -121,7 +128,7 @@ footer { margin-top: auto; }
   justify-content: center;
 }
 
-/* === Hero Section Overlay === */
+
 .hero-section::before {
   content: "";
   position: absolute;
@@ -129,7 +136,7 @@ footer { margin-top: auto; }
   background: rgba(0,0,0,.45);
 }
 
-/* === Hero Content Styling === */
+
 .hero-content {
   position: relative;
   z-index: 1;
@@ -170,7 +177,7 @@ footer { margin-top: auto; }
   color: var(--blanc);
 }
 
-/* === Generic Sections === */
+
 section {
   padding: 100px 0;
 }
@@ -202,7 +209,7 @@ section {
   background: var(--beige) !important;
 }
 
-/* === Cards & Carousels === */
+
 .card {
   border: none;
   border-radius: 10px;
@@ -238,7 +245,7 @@ section {
   }
 }
 
-/* ...existing code... */
+
 .footer-beach {
   background: linear-gradient(135deg, var(--Rouge), var(--Rouge-fonce));
   color: var(--blanc);
@@ -277,7 +284,7 @@ section {
   }
 }
 
-/* === 8. Responsive tweaks ================================= */
+
 @media (max-width: 992px) {
   .hero-content .hero-title { font-size: 2rem; }
 }
@@ -286,8 +293,6 @@ section {
   .section-title { margin-bottom: 30px; }
   .navbar { font-size: .95rem; }
 }
-
-/* Section Characters adaptée à la charte graphique avec vert clair */
 
 
 .characters-section {
@@ -614,7 +619,7 @@ section {
 }
 
 
-/* =====  Timeline  ===== */
+
 .timeline-section { 
   position: relative;
 background-color: #bfa94a;
@@ -625,7 +630,7 @@ background-color: #bfa94a;
   padding: 2rem 0;
 }
 
-.timeline::before {              /* ligne verticale centrale */
+.timeline::before {              
   content: "";
   position: absolute;
   top: 0;
@@ -645,7 +650,7 @@ background-color: #bfa94a;
 .timeline-item.left   { left: 0;  text-align: right; }
 .timeline-item.right  { left: 50%; }
 
-/* repère circulaire */
+
 .timeline-badge {
   position: absolute;
   top: 0;
@@ -659,12 +664,12 @@ background-color: #bfa94a;
   width: 48px;
   height: 48px;
   line-height: 48px;
-  font-size: 1.1rem; /* augmenter le texte à l’intérieur si besoin */
+  font-size: 1.1rem; 
 }
 
-/* Pour les badges à droite */
+
 .timeline-item.right .timeline-badge {
-  left: -24px; /* centrer horizontalement */
+  left: -24px; 
   right: auto;
 }
 
@@ -673,7 +678,7 @@ background-color: #bfa94a;
   left: -12px; right: auto;
 }
 
-/* carte événement */
+
 .timeline-card {
   border-left: 4px solid var(--moutarde, #d4a017);
 }
@@ -689,19 +694,18 @@ background-color: #bfa94a;
   border-left: none !important;
 }
 
-/* Si c’est un pseudo-élément */
+
 #commune .timeline::before {
   display: none !important;
 }
 
-/* Section de fond apaisé */
+
 #commune {
   background: var(--beige);
 }
 
-/* Styles du titre */
 #commune .expertise-title {
-  color: var(--#D4A017);
+  color: var(--noir);
   font-size: 2.4rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -713,14 +717,14 @@ background-color: #bfa94a;
   width: 120px;
 }
 
-/* Texte descriptif */
+
 #commune .expertise-desc {
   font-size: 1.15rem;
   line-height: 1.6;
   color: var(--noir);
 }
 
-/* Timeline simplifiée */
+
 #commune .timeline-list li {
   margin-bottom: 1.4rem;
   padding-left: 1rem;
